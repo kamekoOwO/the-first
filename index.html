@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>kameko的網站</title>
+  </head>
+  <body>
+    <h1 id="h">welcome</h1>
+    <p id="p">This is my website</p>
+    <button class="btn" id="btn" onclick="Clickl()">Click me to translate</button>
+    <script type="text/javascript" charset="utf-8">
+      var btnLanguage=true;
+      function Clickl() {
+        var h=document.getElementById("h");
+        var p=document.getElementById("p");
+        var btn=document.getElementById("btn");
+        function btntrue(){
+          h.innerHTML ="歡迎"
+          p.innerHTML ="這是我的網站"
+          btn.innerHTML = "點我翻譯"
+          btnLanguage=false
+        };
+         function btnfalse(){
+          h.innerHTML ="welcome"
+          p.innerHTML ="This is my website"
+          btn.innerHTML = "Click me to translate"
+          btnLanguage=true
+        };
+        if (btnLanguage){
+           btntrue()
+        }else{
+           btnfalse()
+        }
+      };
+    </script>
+  </body>
+</html>
